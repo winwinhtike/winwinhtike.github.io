@@ -1,0 +1,22 @@
+.header{
+    color :blueviolet;
+    font-style: italic;
+    font-weight: 100;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table, th, td {
+    border:1px solid black;
+    color:rgb(38, 0, 100);
+    font-weight: 100;
+    background-color:azure;
+  }
+
+  img{
+    width:20%;
+    height: 20%;
+  }
+
+  li{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
