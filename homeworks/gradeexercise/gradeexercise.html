@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Retrieve Grade</title>
+    <link rel="stylesheet" href="grade.css">
+</head>
+<body>
+    <form action="https://mumstudents.org/params.php">
+        <h1>Retrieve your grade</h1><br>
+        
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="studentId">Student ID: </label>
+        <input type="number" id="studentId" name="studentId"><br>
+
+        <div class="DropDown">
+            <label for="assignment">Choose an assignment you want to see your grade:</label>
+
+            <select name="assignment" id="assignment">
+            <option value="HomePage">Home Page</option>
+            <option value="AboutMe">About Me</option>
+            <option value="Receipe">Receipe</option>
+            <option value="MovieReview">Movie Review</option>
+            </select>
+        </div>
+
+        <div class="RadioButton">
+            <p>Select your entry: </p>
+            <input type="radio" id="winter" name="entry" value="Winter">
+            <label for="winter">Winter</label><br>
+            <input type="radio" id="spring" name="entry" value="Spring">
+            <label for="spring">Spring</label><br>
+            <input type="radio" id="summer" name="entry" value="Summer">
+            <label for="summer">Summer</label><br>
+            <input type="radio" id="fall" name="entry" value="Fall">
+            <label for="fall">Fall</label><br>
+        </div>
+        <div class="Confirmation">
+            <input type="checkbox" id="confirm" name="confirm" value="Agreement">
+            <label for="confirm"> I aggree that I am not lying and I only look up for my own grade.</label><br>
+        </div>
+        <div class="Submit">
+            <input type="submit" value="Get Grade!">
+        </div>
+    </form>
+</body>
+</html>
