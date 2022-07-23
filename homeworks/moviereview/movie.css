@@ -1,0 +1,134 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('img/background.png');
+    font-size: 8pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.banner {
+    background: url('img/bannerbg.png');
+}
+
+.banner img {
+    display: block;
+    margin: auto;
+}
+h1 {
+    font-size: 24pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 3px  #999999;
+
+}
+.content-area {
+    border: 4px solid gray;
+    border-radius: 20px;
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+.clearfix {
+    clear: both;
+}
+.content-area-right {
+    float: right;
+    width: 250px;
+
+}
+.content-area-left {
+    float: left;
+    width: 550px;
+}
+
+.thirty-three {
+    background: url('img/rbg.png');
+    background-repeat: repeat-x;
+    overflow: hidden;
+}
+.thirty-three img {
+    float: left;
+   
+}
+.thirty-three span {
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+
+}
+
+.review-col1 {
+    float: left;
+    width: 47%;
+    margin-left: 2%;
+}
+.review-col2 {
+    float: right;
+    width: 47%;
+    margin-right: 2%;
+}
+.review p:nth-child(odd) {
+    font-size: 8pt;
+    font-weight: bold;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: #E8DC9B;
+    padding: 8px;
+
+}
+.review img {
+    margin-right: 5px;
+    float: left;    
+}
+.review p:nth-child(even) {
+    font-style: italic;
+    margin-bottom: 20pt;
+}
+.review p:nth-child(even):first-line {
+    font-style: normal;
+}
+
+.content-area-right img {
+    box-sizing: border-box;
+    float: right;
+}
+ dl {
+    background-color: #A2B964;
+    box-sizing: border-box;
+    padding: 10pt;
+    margin: 0;
+    clear: right;
+}
+
+dt{
+    font-weight: bold;
+}
+dd {
+    margin-bottom: 10pt;
+}
+
+.content-area-right ul {
+    padding: 0;
+}
+.content-area-right li {
+    list-style-type: none;
+}
+
+.clearfix+p{
+    background-color: #A2B964;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+.validator {
+    opacity: 0.5;
+    position:fixed;
+    right: 0;
+    bottom: 0;
+}

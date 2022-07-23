@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <link href="tasklist.css" type="text/css" rel="stylesheet">
+    <title>Task List Application</title>
+    <script>
+      
+    //Saving data locally
+    function save() {
+        var fieldValue = document.getElementById('textfield').value;
+        localStorage.setItem('text', fieldValue);
+    }
+        
+    // Reading data
+    function get() {
+        var storedValue = localStorage.getItem('text');
+        if(storedValue) {
+            document.getElementById('test').value = storedValue;
+        }
+    }
+        
+    // Removing stored data
+    function remove() {
+        document.getElementById('textfield').value = '';
+        localStorage.removeItem('text');
+    }
+    </script>
+</head>
+  
+<body onload="get()">
+        <div id=tasklistBorder>
+            <h1>Task List</h1>
+                  <br/>
+                  <br/>
+            <div id="content">
+                <div id="Left">        
+                    
+                    <label>Task</label>
+                    <br/>
+                    <input type="text" id="textfield" name="tasklist" />
+                    <br/>
+                    <input type="button" onclick="save()" name="add" value="Add" />
+                    <br/>
+                    <input type="button" name="clear" value="Clear" />
+                    <br/>
+                    <br/>
+                 </div>
+                            
+                 <div id="Right">
+                    Task List          
+                    <textarea id="test" name="tasklist" rows="6" cols="50">
+                </div>
+                      
+            </div>
+            </div>
+</body> 
+</html>
