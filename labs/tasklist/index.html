@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+    function display() {
+        var taskListElement = document.getElementById("taskList");
+        document.getElementById("task").innerHTML = localStorage.task;
+        
+        var arrTask = [];
+
+        var local = localStorage.getItem('tasks');
+        if (local !== null) {
+            arrTask = JSON.parse(local);
+        } 
+
+        var result = ''; 
+        for (let i = 0; i < arrTask.length; i++) {
+            result += arrTask[i] + '\n';
+        }
+
+        taskListElement.value = result;
+        taskElement.value = '';
+    }
+
+    // same task list remains even closing the browser
+    window.onload = function() {
+        display();
+    };
+
+    function addTask() {
+
+        var taskElement = document.getElementById("task");
+        var task = taskElement.value;
+        var taskListElement = document.getElementById("taskList");
+    
+        var arrTask = [];
+       
+        var local = localStorage.getItem('tasks');
+
+        if (local !== null) {
+            arrTask = JSON.parse(local);
+        } 
+        arrTask.push(task);
+
+        // Store
+        localStorage.setItem('tasks', JSON.stringify(arrTask));
+        // Retrieve
+        document.getElementById("task").innerHTML = localStorage.task;
+        
+        var result = ''; 
+        for (let i = 0; i < arrTask.length; i++) {
+            result += arrTask[i] + '\n';
+        }
+
+        taskListElement.value = result;
+        taskElement.value = '';
+    }
+
+    function clearTask() {
+        
+        localStorage.removeItem("tasks");
+        document.getElementById("taskList").value = '';
+        document.getElementById("task").value = '';
+        
+    }
+</script>
+<head>
+    <title>Task List Application</title>
+    <link href="list.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+   <div class="container">
+        <h1>Task List</h3>
+        <div class="left">
+            <label for="task">Task: </label><br>
+            <input type="text" id="task" name="task"><br><br>
+
+            <button id="btnAdd" onclick="addTask();">Add Task</button><br><br>
+            <button id="btnClear" onclick="clearTask();">Clear Task</button>
+        </div>
+        <div class="right">
+            <label for="task">Task List </label><br>
+            <textarea name="taskList" id="taskList" cols="30" rows="6"></textarea>
+        </div>
+   </div>
+</body>
+</html>

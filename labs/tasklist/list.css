@@ -1,0 +1,17 @@
+.left {
+    float: left;
+    margin-right: 50pt;
+}
+button {
+    width: 110pt;
+}
+
+h1 {
+    color: blue;
+    margin-top: 0;
+}
+
+.container {
+    border: 3pt solid blue;
+    padding: 30px;
+}
