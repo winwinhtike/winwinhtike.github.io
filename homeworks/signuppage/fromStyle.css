@@ -1,0 +1,53 @@
+a span {
+    color: #d27992;
+}
+a {
+    text-decoration: none;
+}
+.pic {
+    width: 80pt !important;
+}
+.Submit {
+    margin-top: 15px;
+    background-color: #feada7;
+    font-weight: bold;
+    font-size: 16pt;
+    border: 1pt solid whitesmoke;
+}
+fieldset {
+    background-color: #e2e3f9;
+    border-radius: 10pt;
+    margin-bottom: 30pt;
+}
+.signup {
+    background-color: white;
+    padding: 2px;
+    border: 1px solid black;
+}
+.validator {
+    margin-top: 15pt;
+}
+label {
+    font-weight: bold;
+}
+input#name {
+    margin-left: 80pt;
+}
+input#male {
+    margin-left: 70pt;
+}
+input#age {
+    margin-left: 90pt;
+}
+input#personality {
+    margin-left: 27pt;
+}
+select#os {
+    margin-left: 47pt;
+}
+input#min {
+    margin-left: 47pt;
+}
+.footer img {
+    width: 150px;
+}
