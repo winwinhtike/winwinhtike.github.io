@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Timer Exercise</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="first">
+        <p> 1. What is the difference between the following 2 statements?</p>
+        <div class="inner">
+            <p>setTimeout(booyah, 2000);
+                <button id="booyah1">Booyah</button>
+            </p>
+            <p>setTimeout(booyah(), 2000)
+                <button id="booyah2">Booyah()</button>
+            </p>
+            <div class="answer">
+                <em>
+                    Answer: 
+                    <br>
+                        <div>
+                            The first one wait until 2000 milisecond to print out "booyah" to console 
+                        while the second one is the wrong way to use with setTimeout because of parenthesis"()" so that it prints out 
+                        immediately without waiting 2000 milisecond.
+                        </div>
+                    
+                </em>
+            </div>
+        </div>
+    </div>
+    <div class="second">
+        <p>2. What do the following 2 alerts display (answer without running the code)?</p>
+        <div class="inner">
+            <div>
+                var myfunc = function(a, x) { <br>
+                    return a * x; <br>
+                   };<br>
+                   var x = myfunc(2, 3); <br>
+                   var y = myfunc; <br>
+                   alert(x); 
+                   <button id="alertX">alert(x)</button>
+                   <br>
+                   alert(y(2,3));
+                   <button id="alertY">alert(y(2,3))</button>
+                   <br>
+            </div>
+    
+            <div class="answer">
+                <em>
+                    Answer: 
+                    <br>
+                        <div>
+                            Both Alerts display same results which are 6.
+                        </div>
+                    
+                </em>
+            </div>
+        </div>
+    </div>
+    <div class="third">
+        <p>
+            3. Write functions booyah1 and booyah2 so that in both cases below, an alert box 
+            comes up after 2 seconds that says “BOOYAH!”
+        </p>
+        <div class="inner">
+            <div>
+                setTimeout(booyah1, 2000);
+                <button id="myBooyah1">Booyah1</button>
+                <br>
+                setTimeout(booyah2(), 2000);
+                <button id="myBooyah2">Booyah2()</button>
+                <br>
+            </div>
+            <div class="answer">
+                <em>
+                    Answer: 
+                    <br>
+                        <div>
+                            Click on each button.
+                        </div>
+                    
+                </em>
+            </div>
+        </div>
+    </div>
+    <div class="forth">
+        <p>
+            4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons
+            for using it)?
+        </p>
+        <div class="inner">
+            <div class="answer">
+                <em>
+                    Answer: 
+                    <br>
+                        <div>
+                            It is the separation of content (HTML) and behavior (Javascript). <br>
+                            The practical application of Unobtrusive Javascript should contains 3 major categories:
+                            <ul>
+                                <li>content (HTML)</li>
+                                <li>presentation (CSS)</li>
+                                <li>behavior (JavaScript)</li>
+                            </ul>
+                            <br>
+                            This approach is useful in so many ways as it makes our code less error prone, clean, easy to update and to debug.
+                        </div>
+                    
+                </em>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
