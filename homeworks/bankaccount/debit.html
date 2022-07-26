@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bankaccount.js"></script>
+    <link rel="stylesheet" href="accounts.css" type="text/css">
+    <title>Debit - Bank</title>
+</head>
+<body onload="loadAccounts()">
+    <select name="os" id="accounts" onchange="selectedAccount()">
+        <option value="mac">Select Account</option>
+    </select>
+    <h3>Current account balance : <span id="balance"></span></h3>
+    <input type="text" name="amount" id="amount">
+    <input type="button" value="Withdraw" onclick="debit()">
+</body>
+</html>
