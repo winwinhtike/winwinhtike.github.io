@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="ascii.js"></script>
+    <script src="animations.js"></script>
+    <link rel="stylesheet" href="ascii.css" type="text/css">
+    <title>Ascii - Animation</title>
+</head>
+<body>
+    <h2>CSE 190 M ASCII Animation Viewer</h2>
+    <textarea name="anim" id="animarea" cols="80" rows="20"></textarea>
+    <div class="controlsContainer">
+        <div class="playcontrolls">
+            <fieldset>
+                <legend>Play Controls :</legend>
+                <button id="start" >Start</button>
+                <button id="stop" disabled="disabled">Stop</button>
+            </fieldset>
+        </div>
+        <div class="animation">
+            <fieldset>
+                <legend>Animation :</legend>
+                <select name="animation" id="animation">
+                    <option value="blank">Blank</option>
+                    <option value="custom">Custom</option>
+                    <option value="bike">Bike</option>
+                    <option value="juggler">Juggler</option>
+                    <option value="exercise">Exercise</option>
+                    <option value="dive">Dive</option>
+                </select>
+            </fieldset>
+        </div>
+        <div class="size">
+            <fieldset>
+                <legend>Size :</legend>
+                <select name="size" id="size">
+                    <option value="tiny">Tiny</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extralarge">Extra Large</option>
+                    <option value="xxl">XXL</option>
+                </select>
+            </fieldset>
+        </div>
+        <div class="speed">
+            <fieldset>
+                <legend>Speed :</legend>
+                <input type="checkbox" name="turbo" id="speed">
+                <label for="turbo">Turbo</label>
+            </fieldset>
+        </div>
+        
+    </div>
+    <div class="validation">
+        <div>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdere2625.github.io%2Ftmnt.html">
+                <img src="images/w3c-html.png" alt="Valid HTML5" /></a> <br />
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=dere2625.github.io%2Ftmnt.css">
+                <img src="images/w3c-css.png" alt="Valid CSS" /></a>
+            <a href="https://webster.cs.washington.edu/jslint/?referer">
+                <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS"/>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
