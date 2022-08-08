@@ -20,14 +20,6 @@ body, button {
     background-image: none;
 }
 
-.mario .puzzlepiece{
-    background-image: url('background.png');
-}
-
-.monalisa .puzzlepiece{
-    background-image : url('mona.jpg')
-}
-
 /* This class should be applied to each of the 15 puzzle pieces. */
 .puzzlepiece {
 	/* background-image: url(background.jpeg); */
@@ -61,12 +53,6 @@ body, button {
 
 .invalid {
 	background-color: #f88;
-}
-
-.hello{
-    background-color: #bfb;
-    border: red 2px solid;
-    border-radius : 5px;
 }
 
 .settings{

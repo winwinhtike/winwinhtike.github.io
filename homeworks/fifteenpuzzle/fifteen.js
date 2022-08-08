@@ -5,7 +5,7 @@ jQuery(function(){
     // initialize each piece
     for (let i=0; i< divs.length; i++) {
         var div = divs[i];
-        
+
         // calculate x and y for this piece
         var x = ((i % 4) * 100) ;
         var y = (Math.floor(i / 4) * 100) ;
@@ -17,16 +17,14 @@ jQuery(function(){
             div.style.top = y + 'px';
             div.style.backgroundImage = 'url("background.png")';
             div.style.backgroundPosition = -x + 'px ' + (-y) + 'px';
+            div.style.backgroundRepeat = 'no-repeat'
         }
-        
-        
+
         // store x and y for later
         div.x = x;
         div.y = y;
         locations.push({a:div.x,b:div.y})
     } 
-
-
 
     var randoms = [];
 
@@ -43,40 +41,17 @@ jQuery(function(){
 
     getRandomNumber();
 
-
     $('#shufflebutton').click(function(){
         var options = $('input[name="back"]')
         var selected = options.filter(':checked').attr('id');
-        switch (selected) {
-            case 'noback':
-                $('#puzzlearea').addClass('noback');
-                $('#puzzlearea').removeClass('mario');
-                $('#puzzlearea').removeClass('monalisa');
-                break;
-            case 'mario':
-                $('#puzzlearea').removeClass('noback');
-                $('#puzzlearea').removeClass('monalisa');
-                $('#puzzlearea').addClass('mario');
-                break;
-            case 'monalisa':
-                $('#puzzlearea').removeClass('noback');
-                $('#puzzlearea').removeClass('mario');
-                $('#puzzlearea').addClass('monalisa');
-            default:
-                break;
-        }
-
         for(let j = 0; j< divs.length; j++){
             var s = divs[j];
             var index = randoms[j];
             s.style.left = locations[index].b+'px';
             s.style.top = locations[index].a+'px';
         }
-        findNeighbors();
-        
-    })
-
-    
+        findNeighbors();     
+    })   
 
     function findNeighbors(){
         clearVisited();
@@ -88,15 +63,13 @@ jQuery(function(){
             if(((div.style.left == left) && Math.abs((parseInt(div.style.top) - parseInt(top+100)) == 100))
             || ((div.style.left == left) && Math.abs(parseInt(top) - (parseInt(div.style.top))) == 100)
             ) {
-                div.classList.add('movablepiece')
-                
+                div.classList.add('movablepiece')              
             }
             if(((div.style.top == top) && Math.abs((parseInt(div.style.left) - parseInt(left+100)) == 100))
             || ((div.style.top == top) && Math.abs(parseInt(left) - (parseInt(div.style.left))) == 100)
             ){
                 div.classList.add('movablepiece')
             }
-
         }
     }
 
@@ -133,7 +106,4 @@ jQuery(function(){
         }
         return JSON.stringify(locations) === JSON.stringify(currentLocations);
     }
-
-    
-    
 })
