@@ -1,0 +1,17 @@
+h1{
+    font-family: papyrus;
+    font-style:italic;
+}
+
+#submit{
+    background-color: green;
+    color: white;
+}
+
+a{
+    border: black 1px solid;
+    background-color: green;
+    color: white;
+    padding: 3px;
+    text-decoration: none;
+}
