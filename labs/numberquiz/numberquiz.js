@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
-const port = 3000;
+const port = 3030;
 
 var questions = ["1, 1, 2, 3, 5", "1, 4, 9, 16, 25", "2, 3, 5, 7, 11", "1, 2, 4, 8, 16"];
 var answers = [9, 8, 36, 13, 32];
