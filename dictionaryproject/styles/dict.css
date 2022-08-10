@@ -1,0 +1,25 @@
+body {
+    margin: 0%;
+}
+
+h1,
+#input {
+    margin: 0%;
+    padding: 10px 10px;
+}
+
+h1 {
+    background-color: lightgrey;
+}
+
+#input {
+    background-color: whitesmoke;
+}
+
+#result {
+    margin: 5px;
+}
+
+footer {
+    text-align: right;
+}
