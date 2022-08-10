@@ -7,7 +7,7 @@ const port = 3000;
 var questions = ["1, 1, 2, 3, 5", "1, 4, 9, 16, 25", "2, 3, 5, 7, 11", "1, 2, 4, 8, 16"];
 var answers = [9, 8, 36, 13, 32];
 
-app.set("view engine", "pug")
+app.set("view engine", "pug");
 
 app.get('/', function(req, res) {
     res.locals = { question: "3, 1, 4, 1, 5", count: 0, score: 0 };
